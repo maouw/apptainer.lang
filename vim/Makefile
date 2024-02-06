@@ -11,7 +11,7 @@ install:
 uninstall:
 	rm ~/.vim/syntax/singularity.vim
 	rm ~/.vim/ftdetect/singularity.vim
-	rm ~/.vim/ftlugin/singularity.vim
+	rm ~/.vim/ftplugin/singularity.vim
 	rm ~/.vim/indent/singularity.vim
 	rmdir ~/.vim/syntax
 	rmdir ~/.vim/ftdetect
