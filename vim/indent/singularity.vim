@@ -38,7 +38,7 @@ function! GetSingularityIndent(lnum)
 
     " Trigger indentation when typing :, if line matches a keyword set indent
     " to level 0
-    if this_line =~ '^\s*\(Bootstrap\|From\|Stage\|OSVersion\|MirrorURL\|Library\|Registry\|Namespace\|IncludeCmd\|Include\):'
+    if this_line =~ '^\s*\(bootstrap\|from\|includecmd\|mirrorurl\|updateurl\|osversion\|include\|library\|registry\|namespace\|stage\|product\|user\|regcode\|productpgp\|registerurl\|modules\|otherurln\|fingerprints\|confurl\|setopt\):\c'
         return 0
     endif
 
@@ -51,14 +51,14 @@ function! GetSingularityIndent(lnum)
         " If parent section is one of
         " %setup,%files,%post,%test,%environment,%startscript,%runscript,%labels,%help
         " increase indent one step
-        if current_line =~ '^%\(setup\|files\|post\|test\|environment\|startscript\|runscript\|labels\|help\)'
+        if current_line =~ '^%\(help\|setup\|files\|labels\|environment\|pre\|post\|runscript\|test\|startscript\|arguments\)'
             return indent(clnum) + &shiftwidth
         endif
 
         " If parent section is one of
         " %apprun *,%applabels *,%appinstall *,%appenv *,%apphelp *,%appfiles *
         " increase indent one step
-        if current_line =~ '^%\(apprun\|applabels\|appinstall\|appenv\|apphelp\|appfiles\|apptest\)\s*[a-zA-Z]*'
+        if current_line =~ '^%\(appinstall\|applabels\|appfiles\|appenv\|apptest\|apphelp\|apprun\|appstart\)\s*[a-zA-Z]*'
             return indent(clnum) + &shiftwidth
         endif
 

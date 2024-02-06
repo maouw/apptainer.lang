@@ -9,14 +9,51 @@ endif
 
 " Keywords
 syn case ignore
-syn keyword singularityKeyword Bootstrap From OSVersion MirrorURL Include
-syn keyword singularityKeyword UpdateURL Include
+syn keyword singularityKeyword
+  \ bootstrap
+  \ from
+  \ includecmd
+  \ mirrorurl
+  \ updateurl
+  \ osversion
+  \ include
+  \ library
+  \ registry
+  \ namespace
+  \ stage
+  \ product
+  \ user
+  \ regcode
+  \ productpgp
+  \ registerurl
+  \ modules
+  \ otherurln
+  \ fingerprints
+  \ confurl
+  \ setopt
+
 syn case match
 
-syn keyword singularitySectionName contained help setup files labels
-syn keyword singularitySectionName contained environment post runscript test
-syn keyword singularitySectionName contained apphelp applabels appinstall
-syn keyword singularitySectionName contained appenv apprun appfiles
+syn keyword singularitySectionName contained
+  \ help
+  \ setup
+  \ files
+  \ labels
+  \ environment
+  \ pre
+  \ post
+  \ runscript
+  \ test
+  \ startscript
+  \ arguments
+  \ appinstall
+  \ applabels
+  \ appfiles
+  \ appenv
+  \ apptest
+  \ apphelp
+  \ apprun
+  \ appstart
 
 " TODO variable dereferencing
 
