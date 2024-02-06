@@ -21,3 +21,12 @@ Add the following to your vimrc:
 ```vim
 Plugin 'singularityware/singularity.lang', {'rtp': 'vim/'}
 ```
+
+### vim-plug
+
+Add the following to your vimrc:
+
+```vim
+Plug 'singularityware/singularity.lang', {'rtp': 'vim'}
+```
+
